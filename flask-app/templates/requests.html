@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+
+{% block content %}
+  <h1>Request</h1>
+  <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.words.label }}<br />
+      {{ form.words(size=32) }}
+    </p>
+    <p>
+      {{ form.exacts.label }}<br />
+      {{ form.exacts(size=32) }}
+    </p>
+    <p>
+      {{ form.from_date.label }}<br />
+      {{ form.from_date(size=32) }}
+    </p>
+    <p>
+      {{ form.until_date.label }}<br />
+      {{ form.until_date(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+  </form>
+{% endblock %}
