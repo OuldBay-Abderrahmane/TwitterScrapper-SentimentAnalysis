@@ -24,8 +24,6 @@ def connect_to_endpoint(url, params):
         raise Exception(response.status_code, response.text)
     return response.json()
 
-# f'{params["words"]} {params["words"]}
-
 
 def fetch_data(params=None):
     query_params = {
