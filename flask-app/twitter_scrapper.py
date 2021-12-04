@@ -4,11 +4,7 @@ import json
 
 bearer_token = os.environ.get("BEARER_TOKEN")
 
-
 search_url = "https://api.twitter.com/2/tweets/search/recent"
-
-query_params = {
-    'query': 'Omicron lang:en', 'tweet.fields': 'author_id'}
 
 
 def bearer_oauth(r):
@@ -28,13 +24,16 @@ def connect_to_endpoint(url, params):
         raise Exception(response.status_code, response.text)
     return response.json()
 
+# f'{params["words"]} {params["words"]}
 
-def main():
+
+def fetch_data(params=None):
+    query_params = {
+        'query': f'({params["words"]}) {params["exacts"]} lang:en', 'max_results': '10', 'tweet.fields': 'author_id'}
     json_response = connect_to_endpoint(search_url, query_params)
-    return json_response
+    with open("tweets.json", "w") as outfile:
+        json.dump(json_response, outfile)
 
 
 if __name__ == "__main__":
-    json_response = main()
-    with open("tweets.json", "w") as outfile:
-        json.dump(json_response, outfile)
+    json_response = fetch_data()

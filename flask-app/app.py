@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, DateField, SubmitField
 from wtforms.validators import Optional
 from flask_bootstrap import Bootstrap
+from twitter_scrapper import fetch_data
 
 
 class RequestForm(FlaskForm):
@@ -30,7 +31,7 @@ def form():
     if form.validate_on_submit():
         dict_form = {"words": f'{form.words.data}', "exacts": f'{form.exacts.data}',
                      "from_date": f'{form.from_date.data}', "until_date": f'{form.until_date.data}'}
-        print(dict_form)
+        fetch_data(dict_form)
         return redirect('/results')
     return render_template('request.html', form=form)
 
