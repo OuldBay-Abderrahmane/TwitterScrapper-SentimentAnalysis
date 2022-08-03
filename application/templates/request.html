@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %}
+{%block content %}
+<div class="container">
+  <h3 class="text-center">Scrape your tweets</h3>
+  <hr />
+  <form action="" method="POST" class="form" role="form">
+    {{ form.csrf_token() }}
+    <div class="row">
+      <div class="form-group col-md-6">
+        {{ wtf.form_field(form.words, class='form-control', placeholder='Words you want to scrape') }}
+      </div>
+      <div class="form-group col-md-6">
+        {{ wtf.form_field(form.exacts, class='form-control', placeholder='Exact words you want to scrape') }}
+      </div>
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary d-flex justify-content-center">Submit</button>
+  </form>
+</div>
+{% endblock %}

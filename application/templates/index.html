@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="index">{% block title %} Scrape tweets and analyse their tone {% endblock %}</h1>
+  <hr class="hr"/>
+  
+  <div class="text-index">
+    <p>Using this application you will be able to scrape tweets of subject you're intersted in and see what the other people thinks about it.</p>
+    <p>For each tweet we use multinomial Naive Bayes algorithm to predict whether it's a positive impression or a negative one. This algorithm have an accuracy of 72%. 
+      The algorithm accuracy relies heavily on the preprocessing of the tweets, 
+      which can increase significantly the accuracy of the predictions and is a part that that still need work !</p>
+    <p>We used Sentiment140 a sentiment analysis dataset created by Kaggle for a competition.</p>
+  </div>
+  <div class="index-button">
+    <button  href="/request" class="button button-primary" ><a href="/request">Start</a></a>
+  </div>
+{% endblock %}
