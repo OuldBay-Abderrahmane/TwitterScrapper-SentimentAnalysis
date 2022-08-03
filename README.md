@@ -7,7 +7,7 @@ Use Twitter's API to make specific requests on special events, analyse the data 
 2. Create your app on the developer portal and retreive your credentials (especially the bearer_token)
 3. Create a local variable for your BEARER_TOKEN with the command
 
-    ` export BEARER_TOKEN=[Your token] `
+    ` export BEARER_TOKEN=Your token `
 
 4. Get a secret key for your FLASK application init file
 
@@ -22,3 +22,14 @@ Use Twitter's API to make specific requests on special events, analyse the data 
 6. Install Spacy using this [link](https://spacy.io/usage)
  
 7. If you want to contribute you need to retrieve [Kaggle dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) 
+
+8. Run the command
+    
+    ` python3 run.py `
+
+### A quick video to show how the app works
+
+
+
+https://user-images.githubusercontent.com/71345328/182701935-1c0871f1-5435-4220-94bd-b3c361243f65.mov
+
