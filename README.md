@@ -26,3 +26,10 @@ Use Twitter's API to make specific requests on special events, analyse the data 
 8. Run the command
     
     ` python3 run.py `
+
+### A quick video to show how the app works
+
+
+
+https://user-images.githubusercontent.com/71345328/182701935-1c0871f1-5435-4220-94bd-b3c361243f65.mov
+
