@@ -20,10 +20,14 @@ Use Twitter's API to make specific requests on special events, analyse the data 
     ` pip3 install flask flask_wtf requests pandas nltk autocorrect sklearn`
     
 6. Install Spacy using this [link](https://spacy.io/usage)
- 
-7. If you want to contribute you need to retrieve [Kaggle dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) 
 
-8. Run the command
+7. Install ChartJS for the visualization part
+
+    ` npm install chart.js `
+
+8. If you want to contribute you need to retrieve [Kaggle dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) 
+
+9. Run the command
     
     ` python3 run.py `
 
