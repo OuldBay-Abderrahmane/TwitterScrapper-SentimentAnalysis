@@ -7,7 +7,7 @@ Use Twitter's API to make specific requests on special events, analyse the data 
 2. Create your app on the developer portal and retreive your credentials (especially the bearer_token)
 3. Create a local variable for your BEARER_TOKEN with the command
 
-    ` export BEARER_TOKEN=[Your token] `
+    ` export BEARER_TOKEN=Your token `
 
 4. Get a secret key for your FLASK application init file
 
